@@ -1,8 +1,10 @@
 """
 File: Hacker.py
 Description: <A brief description of this Python module.>
-Author: <full name>
-ID: <student_id>
-Username: <username>
+Author: <Brett Chadwick>
+ID: <110407073>
+Username: <chabx001>
 This is my own work as defined by the University's Academic Misconduct Policy.
 """
+class hacker:
+    def __init__(self,name, ):
