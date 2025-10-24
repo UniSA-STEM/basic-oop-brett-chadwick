@@ -1,3 +1,4 @@
+import Hacker, Asset, Rig
 """
 File: main.py
 Description: <A brief description of this Python module.>

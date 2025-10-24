@@ -12,4 +12,6 @@ class Asset:
         self.description = description
         self.encrypted = encrypted
 
+    def set_name(self,name):
+        name = name
     def

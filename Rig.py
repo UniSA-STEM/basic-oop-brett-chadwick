@@ -14,9 +14,16 @@ class rig:
         self.storage = storage
         self.upgradeLevel = upgradeLevel
 
-    def set_rig(self,starter_list):
-     for i in starter_list:
-         self.storage.append(starter_list[i])
+    def set_rig(self):
+        storage = self.storage
+    def set_broken(self):
+        broken = self.broken
 
-    def upgrade_rig(self):
+    """Upgrades the rig if an upgrade chip is presernt"""
+    def upgrade_rig(self, upgrade_chip):
+        if upgrade_chip ==False:
+            return "cannot upgrade rig or something"
+        else:
+            self.upgradeLevel +=1
+        return f"Rig level is now {self.upgradeLevel}"
 
