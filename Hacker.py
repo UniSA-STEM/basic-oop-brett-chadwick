@@ -8,8 +8,8 @@ This is my own work as defined by the University's Academic Misconduct Policy.
 """
 import Asset,Rig
 class hacker:
-    def __init__(self, name, inventory):
+    def __init__(self, name, inventory =[]):
         self.name = name
         self.inventory = inventory
 
-    def starting_kit(self):
+

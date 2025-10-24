@@ -6,12 +6,13 @@ ID: <110407073>
 Username: <chabx001>
 This is my own work as defined by the University's Academic Misconduct Policy.
 """
+
+
 class Asset:
     def __init__(self, name, description, encrypted=False):
         self.name = name
         self.description = description
         self.encrypted = encrypted
 
-    def set_name(self,name):
-        name = name
-    def
+    def create_spike(self,name="Data Spike", description="Throw this at enemies"):
+        return self.name,self.description
