@@ -7,6 +7,8 @@ Username: <chabx001>
 This is my own work as defined by the University's Academic Misconduct Policy.
 """
 import Asset,random
+
+
 class rig:
     def __init__(self, name, storage=[], damageCounter=0, broken=False, upgradeLevel = 0):
         self.name = name
@@ -14,6 +16,7 @@ class rig:
         self.broken = broken
         self.storage = storage
         self.upgradeLevel = upgradeLevel
+
     def set_broken(self,broken):
         broken = self.broken
 
@@ -40,7 +43,7 @@ class rig:
 
     def get_upgradeLevel(self):
         return self.upgradeLevel
-    """Asset Generation code, uses switch statement python match??? seems cleaner than 5 if statements"""
+    """Asset Generation code, uses switch statement python match??? seems cleaner than 5 if statements, uses randint for the rng factory for asset generation."""
     def generate_asset(self):
         rand = random.randint(1,5)
         match rand:
