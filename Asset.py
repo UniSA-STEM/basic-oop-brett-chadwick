@@ -1,8 +1,20 @@
 """
 File: Asset.py
 Description: <A brief description of this Python module.>
-Author: <full name>
-ID: <student_id>
-Username: <username>
+Author: <Brett Chadwick>
+ID: <110407073>
+Username: <chabx001>
 This is my own work as defined by the University's Academic Misconduct Policy.
 """
+
+
+class asset:
+    def __init__(self, name, description, encrypted=False):
+        self.name = name
+        self.description = description
+        self.encrypted = encrypted
+
+    def create_spike(self,name="Data Spike", description="Throw this at enemies"):
+        return self.name,self.description
+    def __str__(self):
+        return self.name
