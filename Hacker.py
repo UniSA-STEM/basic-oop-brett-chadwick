@@ -12,4 +12,16 @@ class hacker:
         self.name = name
         self.inventory = inventory
 
+    def get_name(self):
+        return self.name
+    def get_inventory(self):
+        return self.inventory
+
+    def set_inventory(self, inventory):
+        self.inventory = inventory
+
+    def set_name(self, name):
+        self.name = name
+
+
 

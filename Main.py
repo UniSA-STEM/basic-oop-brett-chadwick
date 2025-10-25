@@ -13,5 +13,6 @@ class main:
     basic_rig = Rig.rig("Basic Rig",storage=[])
     print("rig created")
     basic_rig.starting_kit()
+    print(basic_rig.storage[1])
     hacker = Hacker.hacker("L33T_G4M3R1234")
 
