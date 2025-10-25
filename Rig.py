@@ -58,17 +58,14 @@ class rig:
     def return_condition(self):
         damage = self.damageCounter
         upgrade_level = self.upgradeLevel
-        match damage and upgrade_level:
-            case 0:
-                damage = "Pristine"
-            case 1:
-                damage = "Damaged"
-            case 2:
-                damage = "Broken"
-
-
-
-
+        if upgrade_level == 0:
+            match damage:
+                case 0:
+                    return damage == "Pristine"
+                case 1:
+                    return damage == "Damaged"
+                case 2:
+                    return damage == "Broken"
 
     def starting_kit(self):
         starting_spike = 0
@@ -83,30 +80,29 @@ class rig:
             self.storage.append(drive)
             starting_drive = starting_drive + 1
             print("added Removable Drive")
-"""Upgrades the rig if an Hardware_Patch is presernt"""
-def upgrade_rig(self, Hardware_Patch):
-    if Hardware_Patch == False:
-        return "cannot upgrade rig or something"
-    else:
-        self.upgradeLevel +=1
-    return f"Rig level is now {self.upgradeLevel}"
-"""Repairs the rig if the rig is damaged"""
-def repair_rig(self, cryptoToken):
-    if self.broken == True:
-        if cryptoToken in self.storage:
-            self.damageCounter = 0
-            print(f"Rig is damaged, repaired, current damage level = {self.damageCounter}")
-    elif self.broken == False:
-        print("no repairs are needed")
-    elif cryptoToken not in self.storage:
-        print("No crypto tokens to use for repairs")
-    else:
-        print("no repair is needed")
+    """Upgrades the rig if an Hardware_Patch is presernt"""
+    def upgrade_rig(self, Hardware_Patch):
+        if Hardware_Patch != "Hardware Patch":
+            return "cannot upgrade rig or something"
+        else:
+            self.upgradeLevel +=1
+            return f"Rig level is now {self.upgradeLevel}"
+    """Repairs the rig if the rig is damaged"""
+    def repair_rig(self, cryptoToken):
+        if self.broken == True:
+            if cryptoToken in self.storage:
+                self.damageCounter = 0
+                print(f"Rig is damaged, repaired, current damage level = {self.damageCounter}")
+        elif self.broken == False:
+            print("no repairs are needed")
+        elif cryptoToken not in self.storage:
+            print("No crypto tokens to use for repairs")
+        else:
+            print("no repair is needed")
 
-
-def take_damage(self, data_spike):
-    if data_spike is True:
-        return self.damageCounter == self.damageCounter + 1
+    def take_damage(self, data_spike):
+        if data_spike is True:
+            return self.damageCounter == self.damageCounter + 1
 
 
 
