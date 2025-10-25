@@ -8,7 +8,7 @@ This is my own work as defined by the University's Academic Misconduct Policy.
 """
 import Asset,Rig
 class hacker:
-    def __init__(self, name, inventory =[]):
+    def __init__(self, name, inventory=[]):
         self.name = name
         self.inventory = inventory
 
@@ -22,6 +22,11 @@ class hacker:
 
     def set_name(self, name):
         self.name = name
+    def add_rig(self, rig):
+        self.inventory = rig + self.inventory
+
+    def generate_inventory(self):
+        self.inventory.append(Asset.asset("Crypto Token", "Token"))
 
 
 

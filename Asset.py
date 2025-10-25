@@ -8,7 +8,7 @@ This is my own work as defined by the University's Academic Misconduct Policy.
 """
 
 
-class Asset:
+class asset:
     def __init__(self, name, description, encrypted=False):
         self.name = name
         self.description = description
@@ -16,3 +16,5 @@ class Asset:
 
     def create_spike(self,name="Data Spike", description="Throw this at enemies"):
         return self.name,self.description
+    def __str__(self):
+        return self.name
